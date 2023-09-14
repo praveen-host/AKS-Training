@@ -1,0 +1,35 @@
+kubectl get pods
+kubectl delete pods
+kubectl delete pods yadavpod-2
+kubectl create -f document\yadav-rc.yaml
+kubectl delete pod yadav-rc1-8ctbl
+kubectl get rc
+kubectl apply -f document\yadav-rc.yaml
+kubectl delete pod yadav-rc1-bkxwc
+kubectl get po -o wide
+kubectl get nodes
+kubectl scale rc yadav-rc1 --replicas=4
+history
+kubectl create service
+kubectl create service loadblancer yadav-lb1 --tcp 123:80 --dry-run - yaml
+kubectl create service loadbalancer yadav-lb1 --tcp 1234:80 --dry-run -o yaml
+kubectl get pods --show-labels
+kubectl --insecure-skip-tls-verify cluster-info dump
+kubectl create -f yadav-svc-lb.yaml
+kubectl get svc
+kubectl get svc -o wide
+kubectl get po --show-labels
+kubectl get endpoints
+kubectl get endpoints yadav-lb1
+kubectl get all
+kubectl delete all --all
+kubectl create -f assign-rc.yaml
+kubectl create -f assign-svc-lb.yaml
+kubectl apply -f assign-svc-lb.yaml
+kubectl scale rc yadav-rc1 --replica=3
+kubectl scale rc yadav-rc1 --replicas=3
+kubectl get ep
+kubectl apply -f .\assign-svc-lb.yaml
+kubectl expose rc yadav-rc1 --type LoadBalancer --port 80 --target-port 80 --name yadavlb2 --dry-run=client  -o yaml  >yadav-svc-lb2.yaml        
+kubectl create -f .\yadav-svc-lb2.yaml
+kubectl api-resource

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: yadav-lb1
+  name: yadav-lb1 #name of service 
+spec:
+  ports:
+  - name: 1234-80
+    port: 1234
+    protocol: TCP
+    targetPort: 80 #target port app
+    nodePort  : 32109
+  selector:
+    x: hello
+  type: LoadBalancer #type of services
+  
+status:
+  loadBalancer: {}
