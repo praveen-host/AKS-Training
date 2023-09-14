@@ -1,0 +1,13 @@
+apiVersion: v1 # we are targeting apiServer version v1 of AKS control plane
+kind: Pod 
+metadata: # info about kind 
+  name: yadavpod-2  # name of pod  
+spec: # info about your Resources like storage,container,ram,cpu etc
+  #nodeSelector: 
+  #  kubernetes.io/hostname: aks-agentpool-41845352-vmss000001
+  containers: # container info 
+  - name: yadavc1 
+    image: 0001101988/demoapp:latest # image from docker hub
+    ports: # port of app
+    - containerPort: 80 # port of app
+  
